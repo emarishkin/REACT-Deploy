@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import logo from '/logo.jpg'
+import Button from './Buttton'
 
 
 const AppHeader = () => {
+
+ 
 
     const [now,setNow] = useState(new Date())
     setInterval(()=>setNow(new Date()),1000)
@@ -13,8 +16,9 @@ const AppHeader = () => {
             <img style={{width:228,height:124}} src={logo} alt="" />
             <h1>Программа</h1>
         </div>
-        <span><a href="#">Прогресс</a></span>
+        <span><Button >Прогресс</Button></span>
         <span style={{fontSize:25}}>Время: {now.toLocaleTimeString()}</span>
+        
       </div>
     )
 }
